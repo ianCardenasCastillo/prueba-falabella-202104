@@ -8,6 +8,13 @@ Prueba tecnica de Falabella realizada con Python Flask y una base de datos SQLit
 
 ## Endpoints
 
+### Saludo a Falabella /hello
+Saludando a Falabella
+GET: /hello
+```
+Hola Falabella!
+```
+
 ### Patentes /patente
 
 Obtener Patente by Id 
