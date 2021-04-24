@@ -6,7 +6,7 @@ db = SQLAlchemy(app)
 
 class Patente(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True, nullable=True)
-    patente = db.Column(db.String(80),unique=True, nullable=False)
+    patente = db.Column(db.String(80), unique=True, nullable=False)
     def __repr__(self):
         return '<Patente %r>' % self.patente
     @property

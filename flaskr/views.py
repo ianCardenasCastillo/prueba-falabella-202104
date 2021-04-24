@@ -44,12 +44,12 @@ def get_sum_matriz():
                 return jsonify(error="Parametros X y/o Y deben ser mayores o igual a 0"), 200
             matrizrc=[]     # Matriz para R x C
             if int(r)==1:       # Si r es 1
-                matrizrc= [[int(z) for t in range(1,int(c)+1)] for g in range(1,int(r)+1)]      # Se llena la fila con Z
+                matrizrc = [[int(z) for t in range(1,int(c)+1)] for g in range(1,int(r)+1)]      # Se llena la fila con Z
                 print(matrizrc)
             else:       # Si r es distinto a 1
-                matrizrc= [[int(z)+int(g)-1 for t in range(1,int(c)+1)] for g in range(1,int(r)+1)]     # Se llena cada fila con Z + Row_num(g) - 1
+                matrizrc = [[int(z)+int(g)-1 for t in range(1,int(c)+1)] for g in range(1,int(r)+1)]     # Se llena cada fila con Z + Row_num(g) - 1
                 print(matrizrc)
-            matrizxy=[[int(z)+int(g) for t in range(int(x)+1)] for g in range(int(y)+1)]
+            matrizxy = [[int(z)+int(g) for t in range(int(x)+1)] for g in range(int(y)+1)]
             print(matrizxy)
             sumatoriaxy = 0
             for fila in matrizxy:
