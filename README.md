@@ -53,6 +53,13 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 ### Pre-Requisitos 📋
 A continuación se detallaran lo que se requiere para ejecutar el servicio de patentes
 
+### Descargando el repositorio
+
+Para descargar el repositorio debe ejecutar el git clone
+```
+git clone https://github.com/ianCardenasCastillo/prueba-falabella-202104
+```
+
 ### Ejecución Local Windows
 
 Para ejecutar la aplicación en forma local se debe instalar [Python 3.9.4](https://www.python.org/downloads/)
@@ -97,6 +104,15 @@ app    |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 Ahora ingresando a http://127.0.0.1:5000/hello accedera al mensaje de bienvenida
 
 _Si ejecuta el servicio con docker no es necesario instalar python en su equipo local_
+
+_Si al ejecutar el servicio con docker obtiene el siguiente error_
+
+```
+Creating app ... error
+
+ERROR: for app  Cannot create container for service app: Conflict. The container name "/app" is already in use by container "07f29928e724e9728c0929394a1066a898cc95c43db88781271375f0acb5d2ac". You have to remove (or rename) that container to be able to reuse that name.
+```
+_En docker-compose.yaml cambiar el valor de 'container_name' a una diferente de 'app' o eliminar el contenedor que se llame app_
 
 ### Ejecución de pruebas
 
