@@ -19,11 +19,10 @@ from .helpers import populate
 from . import models, views
 
 
-app.register_blueprint(views.bp_patente)
-app.register_blueprint(views.bp_matriz)
-populate()
+app.register_blueprint(views.bp_patente)        # Rutas de patentes
+app.register_blueprint(views.bp_matriz)     # Rutas de matriz
+populate()      # Se pobla la base de datos
 
-# a simple page that says hello
 @app.route('/hello')
 def hello():
     return 'Hola Falabella!'

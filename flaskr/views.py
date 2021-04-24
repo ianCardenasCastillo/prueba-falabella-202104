@@ -9,21 +9,21 @@ bp_patente = Blueprint('patente', __name__, url_prefix='/patente')
 @bp_patente.route('/', methods=['GET'])
 def get_patente():
     if request.method == 'GET':
-        error = None 
-        patente_request = request.args.get('patente')
-        id_request = request.args.get('id')
-        if patente_request is not None and id_request is None:
+        patente_request = request.args.get('patente')       # Se obtiene el parametro patente
+        id_request = request.args.get('id')     # Se obtiene el parametro id
+        if patente_request is not None and id_request is None:      # Si se ingreso la patente por parametro
             patente_found = Patente.query.filter_by(patente=patente_request.upper()).first()
             if patente_found:
-                return jsonify(id=patente_found.id), 200
+                return jsonify(id=patente_found.id), 200        # Se devuelve la id de la patente
             else:
-                return Response(status=204)
-        if patente_request is None and id_request is not None:
+                return Response(status=204)     # Si no se encuentra la patente se retorna un 204 No Content
+        if patente_request is None and id_request is not None:      # Si se ingreso la id por parametro
             patente_found = Patente.query.filter_by(id=id_request).first()
             if patente_found:
-                return jsonify(patente=patente_found.patente), 200
+                return jsonify(patente=patente_found.patente), 200      # Se devuelve la patente asociada al id
             else:
-                return Response(status=204)
+                return Response(status=204)     # Si no se encuentra el id se retorna un 204 No Content
+        return Response(status=400)
 
 bp_matriz = Blueprint('matriz', __name__, url_prefix='/matriz')
 @bp_matriz.route('/',methods=["GET"])

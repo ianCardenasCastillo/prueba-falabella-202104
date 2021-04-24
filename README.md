@@ -152,3 +152,10 @@ TOTAL                                166      6    96%
 * [Visual Studio Code](https://code.visualstudio.com/download) - Editor de Texto
 * [Python 3.9.4](https://www.python.org/downloads/) - Interpretador
 * [Docker](https://docs.docker.com/docker-for-windows/install/) - Orquestador de contenedores
+
+## Autores ✒️
+
+* **Ian Cárdenas Castillo** - *Desarrollo y Documentación* - [Ian Cárdenas C](https://github.com/ianCardenasCastillo)
+
+---
+⌨️ con ❤️ por [Ian Cárdenas C](https://github.com/ianCardenasCastillo) 😊

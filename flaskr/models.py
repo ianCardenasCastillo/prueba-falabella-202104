@@ -10,16 +10,12 @@ class Patente(db.Model):
     def __repr__(self):
         return '<Patente %r>' % self.patente
     @property
-    def serialize(self):
-       """Return object data in easily serializable format"""
-       return {
-           'id'     : self.id,
-           'patente': self.patente
-       }
+    def serialize(self):        # Propiedad que entrega el modelo como un Json
+        """Return object data in easily serializable format"""
+        return {
+            'id'     : self.id,
+            'patente': self.patente
+        }
 
-db.drop_all()
-db.create_all()
-
-# patente = Patente(patente='AAAA0000')
-# db.session.add(patente)
-# db.session.commit()
+db.drop_all()       # Se alimina toda la base de datos para un trabajo limpio
+db.create_all()     # Se crea la base de datos con la tabla patente
