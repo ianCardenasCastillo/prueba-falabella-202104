@@ -1,3 +1,8 @@
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+
+[![Generic badge](https://img.shields.io/badge/coverage-96%25-green)](https://shields.io/)
+
+
 # Prueba Tecnica Falabella
 Prueba tecnica de Falabella realizada con Python Flask y una base de datos SQLite
 
@@ -72,6 +77,36 @@ tests\functional\test_patente.py .......       [ 83%]
 tests\unit\test_models.py ..                   [100%] 
 
 ========================= 12 passed in 1.31s ==========================
+```
+
+### Ejecución coverage
+Para ejecutar las pruebas en forma local se debe instalar [Python 3.9.4](https://www.python.org/downloads/)
+
+Posteriormente ejecutar 'coverage run -m pytest' para instalar todas las dependencias del proyecto
+```
+coverage run -m pytest
+```
+Luego ejecutar 'coverage report'
+```
+coverage report
+```
+
+Debera obtener el siguiente output
+```
+Name                               Stmts   Miss  Cover
+------------------------------------------------------
+flaskr\__init__.py                    17      0   100%
+flaskr\helpers\__init__.py            21      0   100%
+flaskr\models.py                      13      1    92%
+flaskr\views.py                       54      5    91%
+tests\__init__.py                      0      0   100%
+tests\functional\__init__.py           0      0   100%
+tests\functional\test_matriz.py       18      0   100%
+tests\functional\test_patente.py      35      0   100%
+tests\unit\__init__.py                 0      0   100%
+tests\unit\test_models.py              8      0   100%
+------------------------------------------------------
+TOTAL                                166      6    96%
 ```
 
 ## Construido con 🛠️
