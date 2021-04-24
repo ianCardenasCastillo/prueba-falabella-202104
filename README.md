@@ -6,6 +6,37 @@
 # Prueba Tecnica Falabella
 Prueba tecnica de Falabella realizada con Python Flask y una base de datos SQLite
 
+## Endpoints
+
+### Patentes /patente
+
+Obtener Patente by Id 
+GET: /patente/?id=1
+```
+{
+    "patente": "AAAA000"
+}
+```
+
+Obtener Id by Patente
+GET: /patente/?patente=AAAA000
+```
+{
+    "id": 1
+}
+```
+
+### Matriz XY /matriz
+
+Obtener sumatoria Matriz X Y
+GET: /matriz/?r=4&c=3&z=2&x=1&y=2
+```
+{
+    "resultado": 18
+}
+```
+
+
 ## Comenzando
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
