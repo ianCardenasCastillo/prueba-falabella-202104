@@ -33,6 +33,9 @@ GET: /patente/?patente=AAAA000
 }
 ```
 
+_Patentes desde el AAAA000 hasta el ZZZZ999, en esta colección se omite las patentes con dominios ÑÑÑÑ_
+_Un total de 26000 patentes_
+
 ### Matriz XY /matriz
 
 Obtener sumatoria Matriz X Y
